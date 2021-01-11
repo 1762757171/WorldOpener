@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-WorldOperner.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\ue\WorldOpener\Intermediate\Build\Win64\WorldOpenerEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"D:\ue\WorldOpener\Plugins\WorldOperner\Intermediate\Build\Win64\UE4Editor\Development\WorldOperner\Module.WorldOperner.cpp.obj"
+"D:\ue\WorldOpener\Plugins\WorldOperner\Intermediate\Build\Win64\UE4Editor\Development\WorldOperner\Default.rc2.res"
+/OUT:"D:\ue\WorldOpener\Plugins\WorldOperner\Intermediate\Build\Win64\UE4Editor\Development\WorldOperner\UE4Editor-WorldOperner.lib"
+/INCLUDE:IMPLEMENT_MODULE_WorldOperner

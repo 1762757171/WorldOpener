@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "WorldOpener",
+	"Description": "A Helper of opening a big world with multiple sublevels. You can open the persistent level with no sublevels, and you can load and unload any sublevel when editing.",
+	"Category": "Editor",
+	"CreatedBy": "Lyx",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "WorldOpener",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	],
+	"WhitelistPlatforms": [ "Win64" ]
+}

@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.WorldOperner.cpp.obj": [
+			"WorldOperner.cpp.obj",
+			"WorldOpernerCommands.cpp.obj",
+			"WorldOpernerStyle.cpp.obj"
+		]
+	}
+}
