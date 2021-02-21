@@ -44,7 +44,9 @@ public class WorldOpener : ModuleRules
 				"SlateCore",
 				// ... add private dependencies that you statically link with here ...	
 				"WorkspaceMenuStructure",
-				"EditorStyle"
+				"EditorStyle",
+				"LevelSequence",
+				"ContentBrowser"
 			}
 			);
 		

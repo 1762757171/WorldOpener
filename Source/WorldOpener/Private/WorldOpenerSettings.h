@@ -2,6 +2,15 @@
 #include "CoreMinimal.h"
 #include "WorldOpenerSettings.generated.h"
 
+USTRUCT()
+struct FMapArray
+{
+    GENERATED_BODY()
+public:
+    UPROPERTY(EditAnywhere, Config, Category = "World Opener", meta=(DisplayThumbnail="false"))
+    TArray<TAssetPtr<class UWorld>> Maps;
+};
+
 UCLASS(config=EditorPerProjectUserSettings, defaultconfig)
 class UWoSettings : public UObject
 {
@@ -15,6 +24,8 @@ public:
     UPROPERTY(EditAnywhere, Config, Category = "World Opener", meta=(DisplayThumbnail="false"))
     TSet<TAssetPtr<class UWorld>> PreloadWorlds;
     
+    UPROPERTY(EditAnywhere, Config, Category = "World Opener", meta=(DisplayThumbnail="false"))
+    TMap<TAssetPtr<class ULevelSequence>, FMapArray> SequenceAdditionAssociatedWorld;
 };
 
 UCLASS(config=EditorPerProjectUserSettings)

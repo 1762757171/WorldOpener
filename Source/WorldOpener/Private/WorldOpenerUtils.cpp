@@ -1,9 +1,11 @@
-﻿#include "WorldOpenerUtils.h"
+#include "WorldOpenerUtils.h"
 #include "EditorLevelUtils.h"
 #include "FileHelpers.h"
 
 void WoUtils::LoadLevel(ULevelStreaming* InLevelStreaming)
 {
+    if(InLevelStreaming->IsLevelVisible())
+        return;
     WoUtils::FAvoidModifyHelper NoModifyWorld(InLevelStreaming);
     auto& CurrentState = access_private::CurrentState(*InLevelStreaming);
     CurrentState = ULevelStreaming::ECurrentState::Unloaded;
@@ -41,7 +43,8 @@ void WoUtils::FlushWorld(const TArray<ULevelStreaming*>& InAdded)
 
     for(const auto& a : InAdded)
         if(ULevel* l = a->GetLoadedLevel())
-            EditorLevelUtils::SetLevelVisibility(l, true, true, ELevelVisibilityDirtyMode::DontModify);
+            if(!l->bIsVisible)
+                EditorLevelUtils::SetLevelVisibility(l, true, true, ELevelVisibilityDirtyMode::DontModify);
 }
 
 void WoUtils::MakeCurrent(ULevelStreaming* InLevelStreaming)

@@ -6,7 +6,7 @@ ACCESS_PRIVATE_FIELD(ULevelStreaming, ULevelStreaming::ECurrentState, CurrentSta
 namespace WoUtils
 {
     //
-    // Helper struct to temporally make specified UObject immune to dirtying
+    // Helper struct to temporarily make specified UObject immune to dirtying
     //
     struct FAvoidModifyHelper
     {
